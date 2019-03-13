@@ -2,8 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wust.mapper.UserMapper">
     <!--mapper代理开发，这里的namespace的地址必须是所代理的接口的完整地址-->
-
     <select id="getUserById" resultType="User" parameterType="int">
         SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="getUser" resultType="User" parameterType="User">
+        SELECT  * FROM  user WHERE ( username= #{username} and password=#{password} )
+        or (telphone=#{telphone} and password=#{password} )
     </select>
 </mapper>

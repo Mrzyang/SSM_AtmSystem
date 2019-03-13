@@ -1,10 +1,14 @@
 package com.wust.pojo;
 
+import java.util.Date;
+
 public class UserPerServices {
     private int userId;
     private long cardId;
     private int serviceId;
     private double buyNum;
+
+    private Date buyTime;
 
     public int getUserId() {
         return userId;
@@ -38,6 +42,14 @@ public class UserPerServices {
         this.buyNum = buyNum;
     }
 
+    public Date getBuyTime() {
+        return buyTime;
+    }
+
+    public void setBuyTime(Date buyTime) {
+        this.buyTime = buyTime;
+    }
+
     @Override
     public String toString() {
         return "UserPerServices{" +
@@ -45,6 +57,7 @@ public class UserPerServices {
                 ", cardId=" + cardId +
                 ", serviceId=" + serviceId +
                 ", buyNum=" + buyNum +
+                ", buyTime=" + buyTime +
                 '}';
     }
 }

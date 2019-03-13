@@ -5,7 +5,6 @@ import java.util.Date;
 public class PersonalServices {
     private int id;
     private String name;
-    private Date buyTime;
     private Date allocationTime;
     private double buyMoney;
     private double yield_rate;
@@ -26,13 +25,6 @@ public class PersonalServices {
         this.name = name;
     }
 
-    public Date getBuyTime() {
-        return buyTime;
-    }
-
-    public void setBuyTime(Date buyTime) {
-        this.buyTime = buyTime;
-    }
 
     public Date getAllocationTime() {
         return allocationTime;
@@ -63,7 +55,6 @@ public class PersonalServices {
         return "PersonalServices{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", buyTime=" + buyTime +
                 ", allocationTime=" + allocationTime +
                 ", buyMoney=" + buyMoney +
                 ", yield_rate=" + yield_rate +

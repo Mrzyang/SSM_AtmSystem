@@ -4,6 +4,7 @@ public class User {
     private int id;
     private String username;
     private String password;
+    private String telphone;
     private int authority;
     private int is_deleted;
 
@@ -47,12 +48,21 @@ public class User {
         this.is_deleted = is_deleted;
     }
 
+    public String getTelphone() {
+        return telphone;
+    }
+
+    public void setTelphone(String telPhone) {
+        this.telphone = telPhone;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", telphone='" + telphone + '\'' +
                 ", authority=" + authority +
                 ", is_deleted=" + is_deleted +
                 '}';
