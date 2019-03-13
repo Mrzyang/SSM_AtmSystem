@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--ssm整合后mybatis的配置文件-->
+    <!--别名的定义-->
+    <typeAliases>
+        <!--定义单个别名-->
+        <!--<typeAlias  type="com.zy.customer.entity.Customer"/>-->
+
+        <!--批量定义别名(常用)，指定包名，Mybatis自动扫描包中的po类,自动定义别名，别名就是类名(首字母大小写都可以)-->
+        <!--<package name="com.zy.seller.entity"></package>-->
+        <!--如果还想给其他包添别名，再多添加几个<package>标签即可-->
+        <package name="com.wust.pojo"/>
+    </typeAliases>
+</configuration>
