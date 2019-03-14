@@ -3,6 +3,17 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <c:import url="header.jsp"/>
+<style type="text/css">
+    .projectInfo{
+        display: flex;
+    }
+    .projectBase {
+        flex: 3;
+    }
+    .projectDetail{
+        flex: 7;
+    }
+</style>
 
         <div class="crumb-wrap">
             <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">理财项目</span><span class="crumb-step">&gt;</span><span class="crumb-name">理财项目详情</span></div>

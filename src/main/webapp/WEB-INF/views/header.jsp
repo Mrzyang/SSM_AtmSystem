@@ -39,8 +39,8 @@
             <ul class="sidebar-list">
                 <li>
                     <ul class="sub-menu">
-                        <li><a href="design.html"><i class="icon-font">&#xe003;</i>用户管理</a></li>
-                        <li><a href="design.html"><i class="icon-font">&#xe00d;</i>理财项目</a></li>
+                        <li><a href="/userManage"><i class="icon-font">&#xe003;</i>用户管理</a></li>
+                        <li><a href="/financialProject"><i class="icon-font">&#xe00d;</i>理财项目</a></li>
                     </ul>
                 </li>
             </ul>

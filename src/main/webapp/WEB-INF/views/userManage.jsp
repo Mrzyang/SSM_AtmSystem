@@ -12,9 +12,8 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="insert.html"><i class="icon-font"></i>新增作品</a>
+                        <a href="insert.html"><i class="icon-font"></i>新增用户</a>
                         <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
                     </div>
                 </div>
                 <div class="result-content">
@@ -29,7 +28,7 @@
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                             <td>1</td>
-                            <td title=""><a target="_blank" href="#" title="">zhangyang</a></td>
+                            <td title=""><a target="_blank" href="/personalInfo" title="">zhangyang</a></td>
                             <td>17671751371</td>
                             
                             <td>

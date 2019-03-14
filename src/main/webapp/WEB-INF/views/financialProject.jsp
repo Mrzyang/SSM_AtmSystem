@@ -10,9 +10,8 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="insert.html"><i class="icon-font"></i>新增作品</a>
+                        <a href="/insertProject"><i class="icon-font"></i>新增理财项目</a>
                         <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
                     </div>
                 </div>
                 <div class="result-content">
@@ -29,7 +28,7 @@
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                             <td>1</td>
-                            <td title=""><a target="_blank" href="#" title="">天弘基金</a></td>
+                            <td title=""><a target="_blank" href="/projectDetail" title="">天弘基金</a></td>
                             <td>10000元</td>
                             <td>2年</td>
                             <td>0.9%</td>
