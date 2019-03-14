@@ -2,16 +2,16 @@ package com.wust.utils;
 
 public class ResultData {
     private int status;
-    private int message;
-    private Object object;
+    private String message;
+    private Object data;
 
     public ResultData() {
     }
 
-    public ResultData(int status, int message, Object object) {
+    public ResultData(int status, String message, Object data) {
         this.status = status;
         this.message = message;
-        this.object = object;
+        this.data = data;
     }
 
     public int getStatus() {
@@ -22,28 +22,28 @@ public class ResultData {
         this.status = status;
     }
 
-    public int getMessage() {
+    public String getMessage() {
         return message;
     }
 
-    public void setMessage(int message) {
+    public void setMessage(String message) {
         this.message = message;
     }
 
-    public Object getObject() {
-        return object;
+    public Object getData() {
+        return data;
     }
 
-    public void setObject(Object object) {
-        this.object = object;
+    public void setData(Object data) {
+        this.data = data;
     }
 
     @Override
     public String toString() {
         return "ResultData{" +
                 "status=" + status +
-                ", message=" + message +
-                ", object=" + object +
+                ", message='" + message + '\'' +
+                ", data=" + data +
                 '}';
     }
 }

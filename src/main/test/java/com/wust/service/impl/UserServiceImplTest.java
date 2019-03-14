@@ -22,13 +22,4 @@ public class UserServiceImplTest {
         User user=userService.getUserById(1);
         System.out.println(user);
     }
-    @Test
-    public void getUser(){
-        User user=new User();
-        //user.setUsername("zy");
-        user.setTelphone("123456");
-        user.setPassword("123");
-        List users=userService.getUser(user);
-        System.out.println(users.get(0));
-    }
 }
