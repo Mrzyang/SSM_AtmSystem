@@ -27,8 +27,26 @@
     <!-- 配置 MultipartResolver -->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="defaultEncoding" value="UTF-8"></property>
-        <property name="maxUploadSize" value="1024000"></property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="1024000"/>
     </bean>
+
+    <!-- 配置登录拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截所有mvc控制器 -->
+            <mvc:mapping path="/**"/>
+            <!-- mvc:exclude-mapping是另外一种拦截，它可以在你后来的测试中对某个页面进行不拦截，这样就不用在
+                LoginInterceptor的preHandler方法里面获取不拦截的请求uri地址了(优选) -->
+            <!--不拦截登录页面-->
+            <mvc:exclude-mapping path="/login" />
+            <!--不拦截静态资源-->
+            <mvc:exclude-mapping path="/assets/**" />
+            <!--不拦截验证码图片请求-->
+            <mvc:exclude-mapping path="/verifycode" />
+            <bean class="com.wust.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 
 </beans>
