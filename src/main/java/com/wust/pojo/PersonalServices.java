@@ -5,7 +5,7 @@ import java.util.Date;
 public class PersonalServices {
     private int id;
     private String name;
-    private Date allocationTime;
+    private int allocationTime;    //单位： 年
     private double buyMoney;
     private double yield_rate;
 
@@ -26,11 +26,11 @@ public class PersonalServices {
     }
 
 
-    public Date getAllocationTime() {
+    public int getAllocationTime() {
         return allocationTime;
     }
 
-    public void setAllocationTime(Date allocationTime) {
+    public void setAllocationTime(int allocationTime) {
         this.allocationTime = allocationTime;
     }
 
