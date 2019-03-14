@@ -1,6 +1,5 @@
 package com.wust.pojo;
 
-import java.util.Date;
 
 public class PersonalServices {
     private int id;
@@ -8,6 +7,7 @@ public class PersonalServices {
     private int allocationTime;    //单位： 年
     private double buyMoney;
     private double yield_rate;
+    private String description;
 
     public int getId() {
         return id;
@@ -50,6 +50,14 @@ public class PersonalServices {
         this.yield_rate = yield_rate;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "PersonalServices{" +
@@ -58,6 +66,7 @@ public class PersonalServices {
                 ", allocationTime=" + allocationTime +
                 ", buyMoney=" + buyMoney +
                 ", yield_rate=" + yield_rate +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

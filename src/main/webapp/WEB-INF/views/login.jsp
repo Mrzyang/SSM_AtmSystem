@@ -73,7 +73,7 @@
                             console.log(msg);
                             layer.msg(msg);
                             if (result.status == 200) {
-                                window.setTimeout("window.location.href='/userManage'", 5000);
+                                window.setTimeout("window.location.href='/userManage'", 1000);
                             }
                         }
                     });

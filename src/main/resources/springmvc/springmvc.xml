@@ -44,6 +44,7 @@
             <mvc:exclude-mapping path="/assets/**" />
             <!--不拦截验证码图片请求-->
             <mvc:exclude-mapping path="/verifycode" />
+            <mvc:exclude-mapping path="/doLogin" />
             <bean class="com.wust.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

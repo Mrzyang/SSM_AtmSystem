@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
         if(users.size()==0)
             return null;
         User user1=(User) users.get(0);
-        System.out.println("Service中： "+user1);
         return user1;
     }
     //判断登陆

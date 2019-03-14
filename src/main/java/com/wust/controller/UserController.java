@@ -44,23 +44,24 @@ public class UserController {
     public String loginUI(){
         return "login";
     }
+
     @ResponseBody
     @RequestMapping(value = "/doLogin",produces = MediaType.APPLICATION_JSON_VALUE+";charset=utf-8")
     public ResultData doLogin(User user,String verifycode,HttpServletRequest request){
         String verifycodeOfSession= (String) request.getSession(true).getAttribute("verifycode");
-        System.out.println("Conrtoller：");
-        System.out.println(user);
-        System.out.println(verifycode);
         return userService.doLogin(user,verifycode,verifycodeOfSession);
     }
     @RequestMapping("/userManage")
-    public String userManageUI(HttpServletRequest request){
-        HttpSession session=request.getSession(true);
-        User user= (User) session.getAttribute("USER");
-        System.out.println("userManage:-----------");
-        System.out.println(user);
+    public String userManageUI(){
         return "userManage";
     }
+
+    @RequestMapping("/personalInfo")
+    public String personalInfoUI(){
+        return "personalInfo";
+    }
+
+
 
 
 }
