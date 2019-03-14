@@ -4,9 +4,9 @@ package com.wust.pojo;
 public class PersonalServices {
     private int id;
     private String name;
-    private int allocationTime;    //单位： 年
+    private int allocationTime;    // 定期理财时长，单位：年
     private double buyMoney;
-    private double yield_rate;
+    private double yieldRate;
     private String description;
 
     public int getId() {
@@ -42,13 +42,6 @@ public class PersonalServices {
         this.buyMoney = buyMoney;
     }
 
-    public double getYield_rate() {
-        return yield_rate;
-    }
-
-    public void setYield_rate(double yield_rate) {
-        this.yield_rate = yield_rate;
-    }
 
     public String getDescription() {
         return description;
@@ -58,6 +51,14 @@ public class PersonalServices {
         this.description = description;
     }
 
+    public double getYieldRate() {
+        return yieldRate;
+    }
+
+    public void setYieldRate(double yieldRate) {
+        this.yieldRate = yieldRate;
+    }
+
     @Override
     public String toString() {
         return "PersonalServices{" +
@@ -65,7 +66,7 @@ public class PersonalServices {
                 ", name='" + name + '\'' +
                 ", allocationTime=" + allocationTime +
                 ", buyMoney=" + buyMoney +
-                ", yield_rate=" + yield_rate +
+                ", yieldRate=" + yieldRate +
                 ", description='" + description + '\'' +
                 '}';
     }

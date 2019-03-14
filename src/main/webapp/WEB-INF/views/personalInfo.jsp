@@ -14,13 +14,13 @@
             <div class="result-content">
                 <ul class="sys-info-list">
                     <li>
-                        <label class="res-lab">账户余额</label><span class="res-info">20000 RMB</span>
+                        <label class="res-lab">账户余额</label><span class="res-info">${totalMoney}</span>
                     </li>
                     <li>
-                        <label class="res-lab">银行卡数量</label><span class="res-info">5张</span>
+                        <label class="res-lab">银行卡数量</label><span class="res-info">${cardNum}张</span>
                     </li>
                     <li>
-                        <label class="res-lab">已购买理财产品数</label><span class="res-info">2</span>
+                        <label class="res-lab">已购买理财产品数</label><span class="res-info">${projectNum}</span>
                     </li>
                 </ul>
             </div>
@@ -36,6 +36,7 @@
                 </div>
                 <div class="result-content">
                     <table class="result-tab" width="100%">
+
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>理财产品名称</th>
@@ -45,22 +46,27 @@
                             <th>购买时间</th>
                             <th>到期时间</th>
                             <th>利率</th>
+                            <th>购买数目</th>
+                            <th>总价</th>
                             <th>操作</th>
                         </tr>
+                        <c:forEach var="i" items="${projectBoughtList}">
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td title="">天弘基金</td>
-                            <td>64213454567812185</td>
-                            <td>10000元</td>
-                            <td>1年</td>
-                            <td>2018/12/15</td>
-                            <td>2019/12/15</td>
-                            <td>0.9%</td>
+                            <td title="">${i.projectName}</td>
+                            <td>${i.cardNum}</td>
+                            <td>${i.buyMoney}元</td>
+                            <td>${i.allocationTime}年</td>
+                            <td>${i.buyTime}</td>
+                            <td>${i.dueTime}</td>
+                            <td>${i.yieldRate}%</td>
+                            <td>${i.num}</td>
+                            <td>${i.totalMoney}元</td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-del" href="#">取消</a>
                             </td>
                         </tr>
+                        </c:forEach>
                     </table>
                     <div class="list-page">
                         <ul class="pagination">

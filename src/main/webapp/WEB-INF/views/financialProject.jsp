@@ -25,18 +25,20 @@
                             <th>利率</th>
                             <th>操作</th>
                         </tr>
+                         <c:forEach var="i" items="${projectList}">
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>1</td>
-                            <td title=""><a target="_blank" href="/projectDetail" title="">天弘基金</a></td>
-                            <td>10000元</td>
-                            <td>2年</td>
-                            <td>0.9%</td>
+                            <td>${i.id}</td>
+                            <td title=""><a target="_blank" href="/projectDetail" title="">${i.name}</a></td>
+                            <td>${i.buyMoney}元</td>
+                            <td>${i.allocationTime}年</td>
+                            <td>${i.yieldRate}%</td>
                             <td>
                                 <a class="link-update" href="#">修改</a>
                                 <a class="link-del" href="#">删除</a>
                             </td>
                         </tr>
+                         </c:forEach>
                     </table>
                     <div class="list-page">
                         <ul class="pagination">

@@ -16,7 +16,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
-
+//单元测试时要注释这一句
     @Autowired
     HttpSession session;  //这里直接注入session是通过的
 
@@ -55,5 +55,26 @@ public class UserServiceImpl implements UserService {
          }
         return resultData;
      }
+
+     public List getAllUsers(){
+        List userList=userMapper.getAllUsers();
+        return userList;
+     }
+     public int getCardNum(int id){
+        int cardNum=userMapper.getCardNum(id);
+        return cardNum;
+     }
+    public double getTotalMoney(int id){
+        return userMapper.getToalMoney(id);
+    }
+    public int getProjectNum(int id){
+        return userMapper.getProjectNum(id);
+    }
+    //获取用户已经购买的理财产品列表
+    public List getProjectBought(int id){
+        return userMapper.getProjectBought(id);
+    }
+
+
 
 }

@@ -7,8 +7,10 @@ public class UserPerServices {
     private long cardId;
     private int serviceId;
     private double buyNum;
-
+    private double totalMoney; // 总价=buyMoney*num
     private Date buyTime;
+    private Date dueTime;
+
 
     public int getUserId() {
         return userId;
@@ -50,6 +52,21 @@ public class UserPerServices {
         this.buyTime = buyTime;
     }
 
+    public Date getDueTime() {
+        return dueTime;
+    }
+
+    public void setDueTime(Date dueTime) {
+        this.dueTime = dueTime;
+    }
+    public double getTotalMoney() {
+        return totalMoney;
+    }
+
+    public void setTotalMoney(double totalMoney) {
+        this.totalMoney = totalMoney;
+    }
+
     @Override
     public String toString() {
         return "UserPerServices{" +
@@ -57,7 +74,9 @@ public class UserPerServices {
                 ", cardId=" + cardId +
                 ", serviceId=" + serviceId +
                 ", buyNum=" + buyNum +
+                ", totalMoney=" + totalMoney +
                 ", buyTime=" + buyTime +
+                ", dueTime=" + dueTime +
                 '}';
     }
 }

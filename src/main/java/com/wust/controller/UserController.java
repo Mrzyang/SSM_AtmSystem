@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UserController {
@@ -52,15 +54,24 @@ public class UserController {
         return userService.doLogin(user,verifycode,verifycodeOfSession);
     }
     @RequestMapping("/userManage")
-    public String userManageUI(){
+    public String userManageUI(Map<String,Object> map){
+        List userList=userService.getAllUsers();
+        map.put("userList",userList);
         return "userManage";
     }
 
     @RequestMapping("/personalInfo")
-    public String personalInfoUI(){
+    public String personalInfoUI(int id,Map<String,Object> map){
+        double totalMoney=userService.getTotalMoney(id);
+        int cardNum=userService.getCardNum(id);
+        int projectNum=userService.getProjectNum(id);
+        List projectBoughtList =userService.getProjectBought(id);
+        map.put("totalMoney",totalMoney);
+        map.put("cardNum",cardNum);
+        map.put("projectNum",projectNum);
+        map.put("projectBoughtList",projectBoughtList);
         return "personalInfo";
     }
-
 
 
 

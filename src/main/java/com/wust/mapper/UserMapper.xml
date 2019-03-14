@@ -10,4 +10,39 @@
         SELECT  * FROM  user WHERE ( username= #{username} and password=#{password} )
         or (telphone=#{telphone} and password=#{password} )
     </select>
+
+    <select id="getAllUsers" resultType="User">
+        select * from user
+    </select>
+    <select id="getCardNum" resultType="int" parameterType="int">
+        SELECT COUNT(*) FROM USER,user_card WHERE user_card.user_id=user.id AND user.id=#{id}
+    </select>
+    <select id="getToalMoney" parameterType="int" resultType="double">
+        SELECT sum(user_card.balance) FROM USER,user_card WHERE user_card.user_id=user.id AND user.id=#{id}
+    </select>
+    <select id="getProjectNum" resultType="int" parameterType="int">
+        SELECT COUNT(*) FROM USER,user_per_services WHERE user_per_services.user_id=user.id AND user.id=#{id}
+    </select>
+    <select id="getProjectBought" resultType="UserPerServicesExt" parameterType="int">
+SELECT
+  personal_services.`name` projectName,
+  user_card.`card_number` cardNum,
+  personal_services.`buy_money` buyMoney,
+  personal_services.`allocation_time` allocationTime,
+  user_per_services.`buy_time` buyTime,
+  user_per_services.due_time dueTime,
+  personal_services.`yield_rate` yieldRate,
+  user_per_services.`buy_num` num,
+  user_per_services.total_money totalMoney
+FROM
+  USER,
+  user_card,
+  user_per_services,
+  personal_services
+WHERE user_per_services.user_id = user.id
+  AND user_per_services.`card_id` = user_card.`id`
+  AND user_per_services.`service_id` = personal_services.`id`
+  AND user_per_services.user_id=#{id}
+    </select>
+
 </mapper>

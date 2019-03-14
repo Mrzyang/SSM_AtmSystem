@@ -4,6 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+    <settings>
+        <!-- 驼峰映射数据库下划线 -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+
     <!--ssm整合后mybatis的配置文件-->
     <!--别名的定义-->
     <typeAliases>
@@ -15,4 +20,5 @@
         <!--如果还想给其他包添别名，再多添加几个<package>标签即可-->
         <package name="com.wust.pojo"/>
     </typeAliases>
+
 </configuration>

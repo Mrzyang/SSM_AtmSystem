@@ -25,17 +25,19 @@
                             <th>手机号</th>
                             <th>操作</th>
                         </tr>
+                        <c:forEach var="i" items="${userList}">
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>1</td>
-                            <td title=""><a target="_blank" href="/personalInfo" title="">zhangyang</a></td>
-                            <td>17671751371</td>
+                            <td>${i.id}</td>
+                            <td title=""><a target="_blank" href="/personalInfo?id=${i.id}" title="">${i.username}</a></td>
+                            <td>${i.telphone}</td>
                             
                             <td>
                                 <a class="link-update" href="#">修改</a>
                                 <a class="link-del" href="#">删除</a>
                             </td>
                         </tr>
+                        </c:forEach>
                     </table>
                     <div class="list-page">
                         <ul class="pagination">

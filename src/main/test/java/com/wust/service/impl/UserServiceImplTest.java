@@ -1,6 +1,5 @@
 package com.wust.service.impl;
 
-import com.wust.mapper.UserMapper;
 import com.wust.pojo.User;
 import com.wust.service.UserService;
 import org.junit.Test;
@@ -22,4 +21,22 @@ public class UserServiceImplTest {
         User user=userService.getUserById(1);
         System.out.println(user);
     }
+    @Test
+    public void getAllUsers(){
+        List userList=userService.getAllUsers();
+        System.out.println(userList);
+    }
+    @Test
+    public void  getCardNum(){
+        int cardNum=userService.getCardNum(1);
+        System.out.println("卡数量:"+cardNum);
+    }
+    @Test
+    public void getTotalMoney(){
+        double totalMoney=userService.getTotalMoney(1);
+        System.out.println("id为1的用户有"+totalMoney);
+    }
+
+
+
 }
