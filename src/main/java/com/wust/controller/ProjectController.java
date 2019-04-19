@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 import java.util.Map;
 
+/*
+* 理财项目相关的控制器
+*
+* */
+
 @Controller
 public class ProjectController {
     @Autowired

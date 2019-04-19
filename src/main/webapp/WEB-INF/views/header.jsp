@@ -45,6 +45,7 @@
 " >
                             <i class="icon-font">&#xe003;</i>用户管理</a></li>
                         <li><a href="/financialProject"><i class="icon-font">&#xe00d;</i>理财项目</a></li>
+                        <li><a href="/uploadPlugin"><i class="icon-font">&#xe00d;</i>上传组件</a></li>
                     </ul>
                 </li>
             </ul>

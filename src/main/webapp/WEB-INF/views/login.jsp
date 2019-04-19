@@ -74,7 +74,7 @@
                             layer.msg(msg);
                             if (result.status == 200) {
                                 if(result.data.authority==1)
-                                     window.setTimeout("window.location.href='/userManage'", 10000);
+                                     window.setTimeout("window.location.href='/userManage'", 1000);
                                 else{
                                     window.location.href='/personalInfo?id='+result.data.id;
                                 }

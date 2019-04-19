@@ -188,6 +188,15 @@
       <version>1.0.2</version>
     </dependency>
 
+    <!--景安/快云对象存储-->
+    <!--注意这里要指定jdk版本，不然会报错-->
+      <dependency>
+          <groupId>net.sf.json-lib</groupId>
+          <artifactId>json-lib</artifactId>
+          <classifier>jdk15</classifier>
+          <version>2.2.2</version>
+      </dependency>
+
   </dependencies>
 
   <build>

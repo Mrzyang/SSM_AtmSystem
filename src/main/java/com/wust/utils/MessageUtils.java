@@ -11,6 +11,11 @@ import java.io.IOException;
  *
  * */
 public class MessageUtils {
+    public static void main(String[] args){
+        //测试短信
+        sendMessage("13476271474","1234，恭喜金珍珍小姐找到工作啦！");
+    }
+
     public static void sendMessage(String tel,String checkCode) {
          // 短信应用SDK AppID
         int appid = 1400088247; // 1400开头
