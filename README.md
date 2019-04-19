@@ -12,6 +12,6 @@
 ## 项目演示
 ![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/login.png)
 ![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/userList.png)
-![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/userInfo)
+![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/userInfo.png)
 ![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/serviceList.png)
 ![image](https://github.com/Mrzyang/SSM_AtmSystem/blob/master/src/main/webapp/WEB-INF/assets/githubDisplayImages/webuploader.png)
